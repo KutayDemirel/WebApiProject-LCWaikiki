@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "65b15c80-fcff-4e9e-85e5-1e99ba17d58d": {
+      "ProjectGuid": "65b15c80-fcff-4e9e-85e5-1e99ba17d58d",
+      "DisplayName": "PatikaWebApi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
