@@ -5,6 +5,11 @@
       "ProjectGuid": "65b15c80-fcff-4e9e-85e5-1e99ba17d58d",
       "DisplayName": "PatikaWebApi",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

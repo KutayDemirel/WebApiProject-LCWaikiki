@@ -38,3 +38,4 @@ C:\Users\ktyde\Desktop\LCW Projeler\PatikaWebApi\PatikaWebApi\bin\Debug\net5.0\M
 C:\Users\ktyde\Desktop\LCW Projeler\PatikaWebApi\PatikaWebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\ktyde\Desktop\LCW Projeler\PatikaWebApi\PatikaWebApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ktyde\Desktop\LCW Projeler\PatikaWebApi\PatikaWebApi\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\ktyde\Desktop\LCW Projeler\PatikaWebApi\PatikaWebApi\bin\Debug\net5.0\Newtonsoft.Json.dll

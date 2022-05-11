@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PatikaWebApi.DBOperations;
+using PatikaWebApi.Middlewares;
 using System.Reflection;
 
 namespace PatikaWebApi
@@ -38,16 +39,23 @@ namespace PatikaWebApi
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
+                app.UseCustomExceptionMiddleWare();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PatikaWebApi v1"));
+
             }
 
+            
+            //app.UseMiddleware<CustomExceptionMiddleWare>();
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCustomExceptionMiddleWare();
+
 
             app.UseEndpoints(endpoints =>
             {

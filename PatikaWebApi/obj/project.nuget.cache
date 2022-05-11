@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bWvyWPrNteFQkPI3KeYbLFq2uVJhuWsPAVL54GhMsCQl+Yb/gqLc+ST6io3jMA2AJu3Pk8EN3zEowmBMBeXZ3A==",
+  "dgSpecHash": "takej+BTrlwHJxLpj2Fi+aZsNPeu/xiUIHZN4CRLWPqfsmF5coVADW+I8T+sYKp5N5lB+YHZy2vbWMn3ifrgbA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ktyde\\Desktop\\LCW Projeler\\PatikaWebApi\\PatikaWebApi\\PatikaWebApi.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\ktyde\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\ktyde\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\ktyde\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\ktyde\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\ktyde\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\ktyde\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\ktyde\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
