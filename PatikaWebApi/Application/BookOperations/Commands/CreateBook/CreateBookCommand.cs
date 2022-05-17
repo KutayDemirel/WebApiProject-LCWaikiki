@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using PatikaWebApi.Common;
 using PatikaWebApi.DBOperations;
+using PatikaWebApi.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,7 @@ namespace PatikaWebApi.BookOperations.CreateBook
     {
         public string Title { get; set; }
         public int GenreId { get; set; }
+        public int AuthorId { get; set; }
         public int PageCount { get; set; }
         public DateTime PublishDate { get; set; }
     }

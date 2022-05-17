@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PatikaWebApi.Common;
 using PatikaWebApi.DBOperations;
+using PatikaWebApi.Entities;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,7 +20,7 @@ namespace PatikaWebApi.BookOperations.GetBooks
 
         public List<BooksViewModel> Handle()
         {
-            var bookList = _dbContext.Books.OrderBy(book => book.Id).ToList<Book>();
+            var bookList = _dbContext.Books.Include(x => x.Genre).OrderBy(book => book.Id).ToList<Book>();
             List<BooksViewModel> vm = _mapper.Map<List<BooksViewModel>>(bookList);//new List<BooksViewModel>();
             //foreach (var book in bookList)
             //{

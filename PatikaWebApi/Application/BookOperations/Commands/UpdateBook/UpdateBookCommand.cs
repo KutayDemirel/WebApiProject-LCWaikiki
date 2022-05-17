@@ -22,8 +22,9 @@ namespace PatikaWebApi.BookOperations.UpdateBook
                 throw new InvalidOperationException("Güncellenecek kitap Bulunamadı");
             }
 
-            book.Title = Model.Title != default ? Model.Title : book.Title;
+            book.Title = Model.Title == default ? Model.Title : book.Title;
             book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
+            book.AuthorId = Model.AuthorId != default ? Model.AuthorId : book.AuthorId;
             //book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
             //book.PublishDate = Model.PublishDate != default ? Model.PublishDate : book.PublishDate;
 
@@ -35,5 +36,6 @@ namespace PatikaWebApi.BookOperations.UpdateBook
     {
         public string Title { get; set; }
         public int GenreId { get; set; }
+        public int AuthorId { get; set; }
     }
 }

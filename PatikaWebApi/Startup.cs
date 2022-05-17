@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PatikaWebApi.DBOperations;
 using PatikaWebApi.Middlewares;
+using PatikaWebApi.Services;
 using System.Reflection;
 
 namespace PatikaWebApi
@@ -32,6 +33,8 @@ namespace PatikaWebApi
 
             services.AddDbContext<BookStoreDbContext>(options => options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddSingleton<ILoggerService, ConsoleLogger>();
+            //services.AddSingleton<ILoggerService, DbLogger>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +43,7 @@ namespace PatikaWebApi
             if (env.IsDevelopment())
             {
                 //app.UseDeveloperExceptionPage();
-                app.UseCustomExceptionMiddleWare();
+                //app.UseCustomExceptionMiddleWare();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PatikaWebApi v1"));
 

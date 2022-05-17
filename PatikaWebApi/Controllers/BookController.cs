@@ -28,8 +28,8 @@ namespace PatikaWebApi.Controllers
         [HttpGet]
         public IActionResult GetBooks()
         {
-            GetBooksQuery query = new GetBooksQuery(_context,_mapper);
-            var result= query.Handle();
+            GetBooksQuery query = new GetBooksQuery(_context, _mapper);
+            var result = query.Handle();
             return Ok(result);
         }
 
@@ -37,22 +37,22 @@ namespace PatikaWebApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            BookDetailViewModel result;
-            GetBooksDetailQuery query = new GetBooksDetailQuery(_context,_mapper);
-                query.BookId = id;
-                GetBooksDetailQueryValidator validator = new GetBooksDetailQueryValidator();
-                validator.ValidateAndThrow(query);
-                result = query.Handle();
+          
+            GetBooksDetailQuery query = new GetBooksDetailQuery(_context, _mapper);
+            query.BookId = id;
+            GetBooksDetailQueryValidator validator = new GetBooksDetailQueryValidator();
+            validator.ValidateAndThrow(query);
+            var result = query.Handle();
             return Ok(result);
-        
+
         }
 
         //POST: api/Books
         [HttpPost]
-        public IActionResult AddBook([FromBody]CreateBookModel newBook)
+        public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
-            CreateBookCommand command = new CreateBookCommand(_context,_mapper);
-           
+            CreateBookCommand command = new CreateBookCommand(_context, _mapper);
+
             command.Model = newBook;
             CreateBookCommandValidator validator = new CreateBookCommandValidator();
             validator.ValidateAndThrow(command);
@@ -63,14 +63,14 @@ namespace PatikaWebApi.Controllers
 
         //PUT: api/Books/1
         [HttpPut("{id}")]
-        public IActionResult UpdateBook(int id,[FromBody]BookUpdateModel updatedBook)
+        public IActionResult UpdateBook(int id, [FromBody] BookUpdateModel updatedBook)
         {
             UpdateBookCommand command = new UpdateBookCommand(_context);
-                command.Model = updatedBook;
-                command.BookId = id;
-                UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
-                validator.ValidateAndThrow(command);
-                command.Handle(); 
+            command.Model = updatedBook;
+            command.BookId = id;
+            UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
+            validator.ValidateAndThrow(command);
+            command.Handle();
             return Ok();
 
         }
@@ -80,10 +80,10 @@ namespace PatikaWebApi.Controllers
         {
 
             DeleteBookCommand command = new DeleteBookCommand(_context);
-                command.BookId = id;
-                DeleteBookCommandValidator validator = new DeleteBookCommandValidator();
-                validator.ValidateAndThrow(command);
-                command.Handle();
+            command.BookId = id;
+            DeleteBookCommandValidator validator = new DeleteBookCommandValidator();
+            validator.ValidateAndThrow(command);
+            command.Handle();
             return Ok();
         }
     }
