@@ -9,11 +9,10 @@ namespace PatikaWebApi.Application.GenreOperations.Commands.CreateGenre
     public class CreateGenreCommand
     {
         public CreateGenreModel Model { get; set; }
-        private readonly BookStoreDbContext _context;
-
+        private readonly IStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public CreateGenreCommand(BookStoreDbContext context, IMapper mapper)
+        public CreateGenreCommand(IStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

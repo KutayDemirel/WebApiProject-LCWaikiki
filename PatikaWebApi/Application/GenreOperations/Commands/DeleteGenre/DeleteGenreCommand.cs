@@ -9,10 +9,10 @@ namespace PatikaWebApi.Application.GenreOperations.Commands.DeleteGenre
     {
         public int GenreId{ get; set; }
 
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
 
 
-        public DeleteGenreCommand(BookStoreDbContext context)
+        public DeleteGenreCommand(IStoreDbContext context)
         {
             _context = context;
         }

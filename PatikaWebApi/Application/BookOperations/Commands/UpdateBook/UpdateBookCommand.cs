@@ -6,10 +6,10 @@ namespace PatikaWebApi.BookOperations.UpdateBook
 {
     public class UpdateBookCommand
     {
-        BookStoreDbContext _dbContext;
+        private readonly IStoreDbContext _dbContext;
         public int BookId { get; set; }
         public BookUpdateModel Model { get; set; }
-        public UpdateBookCommand(BookStoreDbContext context)
+        public UpdateBookCommand(IStoreDbContext context)
         {
             _dbContext = context;
         }

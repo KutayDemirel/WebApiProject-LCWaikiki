@@ -6,10 +6,10 @@ namespace PatikaWebApi.BookOperations.DeleteBook
 {
     public class DeleteBookCommand
     {
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IStoreDbContext _dbContext;
         public int BookId { get; set; }
 
-        public DeleteBookCommand(BookStoreDbContext dbContext)
+        public DeleteBookCommand(IStoreDbContext dbContext)
         {
             _dbContext = dbContext;
         }

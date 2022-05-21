@@ -16,10 +16,11 @@ namespace PatikaWebApi.Controllers
     [Route("api/[controller]s")]
     public class BookController : ControllerBase
     {
-        private readonly BookStoreDbContext _context;
+        //private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public BookController(BookStoreDbContext context, IMapper mapper)
+        public BookController(IStoreDbContext context, IMapper mapper)
         {
             this._context = context;
             this._mapper = mapper;

@@ -9,12 +9,12 @@ namespace PatikaWebApi.BookOperations.GetBooksDetail
 {
     public class GetBooksDetailQuery
     {
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IStoreDbContext _dbContext;
         private readonly IMapper _mapper;
         public int BookId { get; set; }
         //public string BookName { get; set; }
 
-        public GetBooksDetailQuery(BookStoreDbContext dbContext, IMapper mapper)
+        public GetBooksDetailQuery(IStoreDbContext dbContext, IMapper mapper)
         {
             this._dbContext = dbContext;
             this._mapper = mapper;

@@ -7,10 +7,10 @@ namespace PatikaWebApi.Application.GenreOperations.Queries.GetGenres
 {
     public class GetGenresQuery
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetGenresQuery(BookStoreDbContext context, IMapper mapper)
+        public GetGenresQuery(IStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

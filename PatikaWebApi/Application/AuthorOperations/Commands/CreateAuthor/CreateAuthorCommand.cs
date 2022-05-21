@@ -8,11 +8,11 @@ namespace PatikaWebApi.Application.AuthorOperations.Commands.CreateAuthor
 {
     public class CreateAuthorCommand
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         public CreateAuthorViewModel Model;
         private readonly IMapper _mapper;
 
-        public CreateAuthorCommand(BookStoreDbContext context, IMapper mapper)
+        public CreateAuthorCommand(IStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -26,7 +26,7 @@ namespace PatikaWebApi.Application.AuthorOperations.Commands.CreateAuthor
                 throw new InvalidOperationException("Yazar zaten mevcut");
             }
             author = _mapper.Map<Author>(Model);
-            _context.Add(author);
+            _context.Authors.Add(author);
             _context.SaveChanges();
 
         }

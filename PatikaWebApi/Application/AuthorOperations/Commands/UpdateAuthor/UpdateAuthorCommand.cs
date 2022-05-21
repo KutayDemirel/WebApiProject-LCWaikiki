@@ -6,11 +6,11 @@ namespace PatikaWebApi.Application.AuthorOperations.Commands.UpdateAuthor
 {
     public class UpdateAuthorCommand
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         public int AuthorId;
         public UpdateAuthorViewModel Model;
 
-        public UpdateAuthorCommand(BookStoreDbContext context)
+        public UpdateAuthorCommand(IStoreDbContext context)
         {
             _context = context;
         }

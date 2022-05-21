@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PatikaWebApi.Common;
 using PatikaWebApi.DBOperations;
 using PatikaWebApi.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,9 +11,9 @@ namespace PatikaWebApi.BookOperations.GetBooks
 {
     public class GetBooksQuery
     {
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IStoreDbContext _dbContext;
         private readonly IMapper _mapper;
-        public GetBooksQuery(BookStoreDbContext dbContext, IMapper mapper)
+        public GetBooksQuery(IStoreDbContext dbContext, IMapper mapper)
         {
             this._dbContext = dbContext;
             this._mapper = mapper;

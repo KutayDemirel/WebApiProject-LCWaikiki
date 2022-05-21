@@ -7,12 +7,12 @@ namespace PatikaWebApi.Application.AuthorOperations.Queries.GetAuthorsDetail
 {
     public class GetAuthorsDetailQuery
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         public int AuthorId { get; set; }
         private readonly IMapper _mapper;
 
 
-        public GetAuthorsDetailQuery(BookStoreDbContext context, IMapper mapper)
+        public GetAuthorsDetailQuery(IStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

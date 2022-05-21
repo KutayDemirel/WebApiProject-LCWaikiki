@@ -10,10 +10,10 @@ namespace PatikaWebApi.Application.AuthorOperations.Queries.GetAuthors
 {
     public class GetAuthorQuery
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetAuthorQuery(BookStoreDbContext context,IMapper mapper)
+        public GetAuthorQuery(IStoreDbContext context,IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

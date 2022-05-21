@@ -6,10 +6,10 @@ namespace PatikaWebApi.Application.AuthorOperations.Commands.DeleteAuthor
 {
     public class DeleteAuthorCommand
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         public int AuthorId { get; set; }
 
-        public DeleteAuthorCommand(BookStoreDbContext context)
+        public DeleteAuthorCommand(IStoreDbContext context)
         {
             _context = context;
         }

@@ -15,10 +15,10 @@ namespace PatikaWebApi.Controllers
     [Route("/api/[controller]s")]
     public class GenreController : ControllerBase
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public GenreController(BookStoreDbContext context, IMapper mapper)
+        public GenreController(IStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

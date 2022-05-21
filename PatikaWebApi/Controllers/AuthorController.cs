@@ -15,10 +15,10 @@ namespace PatikaWebApi.Controllers
     [Route("/api/[controller]s")]
     public class AuthorController : ControllerBase
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public AuthorController(BookStoreDbContext context, IMapper mapper)
+        public AuthorController(IStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
